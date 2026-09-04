@@ -1,6 +1,6 @@
-# Amazon SKU运营数据分析与自动诊断系统
+# Amazon SKU数据分析与自动诊断系统
 
-> 基于 Python + Pandas 构建的 Amazon SKU 运营数据分析与基础诊断项目
+> 基于 Python + Pandas 构建的 Amazon SKU 数据分析与基础诊断项目
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange)](https://pandas.pydata.org/)
@@ -8,13 +8,13 @@
 
 ## 一、项目简介
 
-本项目模拟 Amazon 运营助理在日常工作中处理 SKU 销售、流量和广告数据的场景，使用 Python + Pandas 对 300 条 SKU 商品运营数据进行自动化处理，并将分析结果输出为 Excel 报告。
+本项目模拟日常工作中处理 SKU 销售、流量和广告数据的场景，使用 Python + Pandas 对 300 条 SKU 商品数据进行自动化处理，并将分析结果输出为 Excel 报告。
 
-项目实现了从 **原始数据 → 数据质量检查 → 核心指标计算 → 异常 SKU 筛选 → SKU 问题诊断 → 运营建议 → Excel 报告** 的基础分析流程。
+项目实现了从 **原始数据 → 数据质量检查 → 核心指标计算 → 异常 SKU 筛选 → SKU 问题诊断 → 建议 → Excel 报告** 的基础分析流程。
 
 ### 核心功能
 
-- 自动生成 300 条 Amazon SKU 模拟运营数据
+- 自动生成 300 条 Amazon SKU 模拟数据
 - 保存并重新读取 CSV 原始数据
 - 检查字段、数据类型、缺失值及重复行
 - 自动计算 CTR、CVR、CPC、ACOS、ROAS、广告订单占比
@@ -42,9 +42,9 @@ Amazon 运营工作中需要持续关注 SKU 的流量、点击、订单、销�
 
 ## 三、项目定位
 
-本项目定位为 **Amazon 运营助理求职作品 + Python 数据分析实践项目**，重点展示：
+本项目定位为 **跨境电商运营/开发产品求职作品 + Python 数据分析实践项目**，重点展示：
 
-- 对 Amazon 基础运营指标的理解
+- 对 Amazon 基础指标的理解
 - 对 SKU 数据分析流程的理解
 - Python / Pandas 数据处理能力
 - 基础的数据异常识别能力
@@ -62,7 +62,7 @@ Amazon 运营工作中需要持续关注 SKU 的流量、点击、订单、销�
 | Python | 项目开发语言、数据处理及自动化分析 |
 | Pandas | CSV 读取、DataFrame 处理、指标计算、筛选及 Excel 导出 |
 | OpenPyXL | Pandas 导出 `.xlsx` 时使用的 Excel 写入引擎 |
-| CSV | 原始运营数据存储 |
+| CSV | 原始数据存储 |
 | Excel | 分析结果及诊断报告展示 |
 | Git / GitHub | 项目版本管理及代码展示 |
 
@@ -121,7 +121,7 @@ Amazon-SKU-Operation-Analysis/
 
 ---
 
-## 七、核心运营指标及计算公式
+## 七、核心指标及计算公式
 
 ### 1. CTR — 点击率
 
@@ -201,7 +201,7 @@ ACOS = 200 / 1,000 = 20%
 
 本项目将 `ACOS > 30%` 作为高 ACOS SKU 的基础筛选条件。
 
-> 实际运营中，ACOS 是否合理不能只看固定百分比，还需要结合产品毛利率、目标利润、产品生命周期及广告策略判断。
+> 实际情况中，ACOS 是否合理不能只看固定百分比，还需要结合产品毛利率、目标利润、产品生命周期及广告策略判断。
 
 ### 5. ROAS — 广告投入产出比
 
@@ -543,7 +543,7 @@ SKU自动诊断
 
 通过本项目，实现了一个基础的 Amazon SKU 数据分析与自动诊断流程：
 
-- 构建 300 条模拟 SKU 原始运营数据
+- 构建 300 条模拟 SKU 原始数据
 - 建立包含 16 个字段的数据结构
 - 使用 Pandas 完成 CSV 数据读取
 - 完成缺失值、重复行和数据类型检查
@@ -569,51 +569,7 @@ SKU自动诊断
 
 ### 后续计划
 
-#### 1. 增加利润分析
-
-加入：
-
-```text
-售价
-采购成本
-平台佣金
-FBA费用
-广告费用
-```
-
-进一步计算利润率和盈亏平衡 ACOS。
-
-#### 2. 增加关键词分析
-
-加入：
-
-```text
-Keyword
-Search Term
-Impressions
-Clicks
-Orders
-Spend
-Sales
-```
-
-识别高花费低转化词、高转化词及低效关键词。
-
-#### 3. 增加库存预警
-
-结合库存、订单量和销售速度，进一步识别潜在缺货风险。
-
-#### 4. 增加数据可视化
-
-使用 Matplotlib 等工具生成：
-
-- ACOS 分布
-- ROAS 排名
-- 销售额排名
-- 广告花费排名
-- CTR / CVR 对比
-
-#### 5. 自动生成运营日报
+#### 自动生成运营日报
 
 进一步实现：
 
@@ -639,7 +595,7 @@ Python自动分析
 
 能够使用 Python / Pandas 对结构化运营数据进行读取、清洗、计算和筛选。
 
-### Amazon 运营基础理解
+### Amazon 基础理解
 
 理解 Sessions、Impressions、Clicks、Orders、Sales、Ad Spend、CTR、CVR、CPC、ACOS、ROAS 等基础指标之间的关系。
 
@@ -676,9 +632,9 @@ ROAS
 
 ## 二十一、作者
 
-**姓名：罗家乐**  
+**姓名：罗嘉乐**  
 **专业：软件工程**  
-**求职方向：跨境电商运营助理 / Amazon运营助理**
+**求职方向：跨境电商运营/开发产品助理**
 
 ---
 
@@ -687,5 +643,3 @@ ROAS
 本项目仅用于个人学习、技术实践及求职作品展示。
 
 项目中的 SKU、ASIN、商品名称、销售数据、广告数据等均为模拟数据，不代表任何真实 Amazon 店铺、品牌或广告账户数据。
-
-本项目不代表本人具有真实 Amazon Seller Central 店铺后台操作经验，也未使用真实店铺数据进行分析。
